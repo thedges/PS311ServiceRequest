@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ImageUploadController_fk</members>
+        <members>PS311ServiceRequestIntakeController</members>
+        <members>TestImageUploadController_fk</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ImageChangeEvent_fk</members>
+        <members>ImageUploadSaveCompleteEvent_fk</members>
+        <members>ImageUploadSaveEvent_fk</members>
+        <members>ImageUpload_fk</members>
+        <members>PS311ServiceRequestIntake</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Case.Address__c</members>
+        <members>Case.Location__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>SLDS0121</members>
+        <members>binaryAjaxJS</members>
+        <members>exifJS</members>
+        <members>leaflet_1_0_2</members>
+        <members>loading_fk</members>
+        <members>mapCrosshair</members>
+        <members>mapLocateMe</members>
+        <members>megapixImageJS</members>
+        <name>StaticResource</name>
+    </types>
+    <version>39.0</version>
+</Package>
