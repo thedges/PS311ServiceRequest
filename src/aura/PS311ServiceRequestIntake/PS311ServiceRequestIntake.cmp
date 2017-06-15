@@ -30,6 +30,7 @@
   <aura:attribute name="attachFileName" type="String" />
 
   <aura:attribute name="parentId" type="String" />
+  <aura:attribute name="runtimeEnv" type="object" />
 
   <aura:registerEvent name="saveFileEvent" type="c:ImageUploadSaveEvent_fk" />
 

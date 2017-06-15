@@ -16,6 +16,9 @@
   },
   jsLoaded: function(component, event, helper) {
     console.log('jsLoaded...');
+
+    helper.setRuntimeEnv(component);
+
     setTimeout(function() {
       var markersLayer = new L.LayerGroup();
       var markersLayerList = [];
@@ -31,9 +34,11 @@
       component.set("v.map", map);
 
       var crosshairIcon = L.icon({
-        iconUrl: '/dev/resource/mapCrosshair',
+        //iconUrl: '/dev/resource/mapCrosshair',
+        iconUrl: $A.get('$Resource.mapCrosshair'),
         iconSize: [200, 200] // size of the icon
       });
+      console.log('crosshairIcon=' + JSON.stringify(crosshairIcon));
       console.log('setting crosshair center=' + map.getCenter());
       crosshair = new L.marker(map.getCenter(), {
         icon: crosshairIcon,

@@ -173,6 +173,8 @@ public without sharing class PS311ServiceRequestIntakeController
 
   private static String formatPhone(String Phone)
   {
+    if (Phone == null) return null;
+
     string nondigits = '[^0-9]';
     string PhoneDigits;
 
