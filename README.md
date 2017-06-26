@@ -6,6 +6,8 @@ This package contains a component to collect 311 service request details. It mim
 * <b>Verify</b> - a verification screen of information about to be submited
 * <b>Confirmation</b> - screen confirming submission of service case with link to new case record
 
+Note: Currently this component has no configuration parameters as was developed for specific demo. Reach out to me if there is customization required.
+
 ![alt text](https://github.com/thedges/PS311ServiceRequest/blob/master/311-community.png "Sample Image")
 
 <a href="https://githubsfdeploy.herokuapp.com">
