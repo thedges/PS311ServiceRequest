@@ -1,4 +1,4 @@
-public class ImageUploadController_fk
+public without sharing class ImageUploadController_fk
 {
 
   @AuraEnabled
