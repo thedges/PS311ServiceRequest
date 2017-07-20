@@ -8,6 +8,8 @@ This package contains a component to collect 311 service request details. It mim
 
 Note: Currently this component has no configuration parameters as was developed for specific demo. Reach out to me if there is customization required.
 
+<b>Dependency:</b> Install the [PSCommon](https://github.com/thedges/PSCommon) package first
+
 ![alt text](https://github.com/thedges/PS311ServiceRequest/blob/master/311-community.png "Sample Image")
 
 <a href="https://githubsfdeploy.herokuapp.com">
