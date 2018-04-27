@@ -22,8 +22,8 @@
       }
     });
     // Enqueue the action
-    //$A.enqueueAction(action);
-    $A.clientService.runActions([action], this, function() {});
+    $A.enqueueAction(action);
+    //$A.clientService.runActions([action], this, function() {});
   },
   getTypes: function(component) {
     var action = component.get("c.getTypeOptions");

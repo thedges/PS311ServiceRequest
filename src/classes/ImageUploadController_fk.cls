@@ -54,6 +54,7 @@ public without sharing class ImageUploadController_fk
         post.put('ParentId', parentId);
         post.put('ContentData', EncodingUtil.base64Decode(base64Data));
         post.put('ContentFileName', fileName);
+        post.put('Visibility', 'AllUsers');
         //if (Network.getNetworkId() != null)
         //{
         //  post.put('NetworkScope', Network.getNetworkId());

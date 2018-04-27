@@ -51,7 +51,7 @@
         crosshair.setLatLng(map.getCenter());
       });
 
-      map.on('moveend', function(e) {
+      map.on('moveend', $A.getCallback(function(e) {
         console.log('moveend2=' + map.getCenter());
         var coords = map.getCenter();
         component.set('v.latitude', coords.lat);
@@ -60,10 +60,10 @@
         //helper.reverseGeocodeNominatim(component, coords.lat, coords.lng);
         helper.reverseGeocodeEsri(component, coords.lat, coords.lng);
 
-      });
+      }));
 
       console.log('getCurrentPosition');
-      navigator.geolocation.getCurrentPosition(function(location) {
+      navigator.geolocation.getCurrentPosition($A.getCallback(function(location) {
         console.log(location.coords.latitude);
         console.log(location.coords.longitude);
         console.log(location.coords.accuracy);
@@ -72,7 +72,7 @@
 
         helper.reverseGeocodeEsri(component, location.coords.latitude, location.coords.longitude);
 
-      });
+      }));
 
     });
   },
