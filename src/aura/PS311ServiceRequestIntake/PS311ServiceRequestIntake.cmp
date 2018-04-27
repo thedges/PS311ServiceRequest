@@ -49,7 +49,7 @@
     <div class="c-container" onclick="{!c.closeQuickAction}">
       <lightning:layout horizontalAlign="space">
 
-        <lightning:layoutItem size="8" smallDeviceSize="4" mediumDeviceSize="6" largeDeviceSize="8" flexibility="auto" padding="around-small">
+        <lightning:layoutItem size="12" smallDeviceSize="4" mediumDeviceSize="6" largeDeviceSize="8" flexibility="auto" padding="around-small">
           <div class="slds-grid">
             <div class="slds-tabs--path" role="application">
               <ul class="slds-tabs--path__nav" role="tablist">
