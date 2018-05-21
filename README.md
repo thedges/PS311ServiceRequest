@@ -11,6 +11,7 @@ This package contains a component to collect 311 service request details. It mim
 ![alt text](https://github.com/thedges/PS311ServiceRequest/blob/master/311-community.png "Sample Image")
 
 * The component configuration fields are:
+  - <b>Auto Center</b> - a flag to set whether the map auto-centers on current GPS location or use the default lat/lng below
   - <b>Map Center Latitude</b> - the default latitude value for centering the map
   - <b>Map Center Latitude</b> - the default longitude value for centering the map
   - <b>Map Zoom Level</b> - the default map zoom level; default: 11
