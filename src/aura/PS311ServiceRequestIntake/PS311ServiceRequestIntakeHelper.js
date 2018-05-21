@@ -14,11 +14,53 @@
       if (resp.hasOwnProperty('error')) {
         component.set('v.address', resp.error.details[0]);
       } else {
-        component.set('v.address', resp.address.Match_addr);
-        //component.set('v.accStreet', resp.address.Address);
-        //component.set('v.accCity', resp.address.City);
-        //component.set('v.accState', resp.address.Region);
-        //component.set('v.accPostal', resp.address.Postal);
+        //component.set('v.address', resp.address.Match_addr);
+        var tmpAddr = '';
+        if (resp.address.Address != null && resp.address.Address.length > 0)
+        {
+            tmpAddr = resp.address.Address;
+        }
+          
+        if (resp.address.City != null && resp.address.City.length > 0)
+        {
+            if (tmpAddr.length > 0)
+            {
+              tmpAddr += ', ' + resp.address.City;
+            }
+            else
+            {
+              tmpAddr = resp.address.City;
+            }
+        }
+        if (resp.address.Region != null && resp.address.Region.length > 0)
+        {
+            if (tmpAddr.length > 0)
+            {
+              tmpAddr += ', ' + resp.address.Region;
+            }
+            else
+            {
+              tmpAddr = resp.address.Region;
+            }
+        }
+        if (resp.address.Postal != null && resp.address.Postal.length > 0)
+        {
+            if (tmpAddr.length > 0)
+            {
+              tmpAddr += ' ' + resp.address.Postal;
+            }
+            else
+            {
+              tmpAddr = resp.address.Postal;
+            }
+        }
+        
+        //console.log('tmpAdd=[' + tmpAddr + ']');
+        component.set('v.address', tmpAddr);
+        component.set('v.street', resp.address.Address);
+        component.set('v.city', resp.address.City);
+        component.set('v.state', resp.address.Region);
+        component.set('v.postal', resp.address.Postal);
       }
     });
     // Enqueue the action
@@ -56,6 +98,15 @@
     map['latitude'] = component.get('v.latitude');
     map['longitude'] = component.get('v.longitude');
     map['address'] = component.get('v.address');
+    map['addressField'] = component.get('v.addressField');
+    map['street'] = component.get('v.street');
+    map['streetField'] = component.get('v.streetField');
+    map['city'] = component.get('v.city');
+    map['cityField'] = component.get('v.cityField');
+    map['state'] = component.get('v.state');
+    map['stateField'] = component.get('v.stateField');
+    map['postal'] = component.get('v.postal');
+    map['postalField'] = component.get('v.postalField');
     map['description'] = component.get('v.description');
     map['type'] = component.get('v.type');
     map['subtype'] = component.get('v.subtype');

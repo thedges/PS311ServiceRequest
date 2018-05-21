@@ -124,10 +124,31 @@ public without sharing class PS311ServiceRequestIntakeController
         c.Location__Longitude__s = Decimal.valueOf(paramMap.get('longitude'));
       }
 
-      if (paramMap.get('address') != null)
+      if (paramMap.get('address') != null && paramMap.get('addressField') != null && paramMap.get('addressField').length() > 0)
       {
-      	c.Address__c = paramMap.get('address');
+      	c.put(paramMap.get('addressField'), paramMap.get('address'));
       }
+        
+      if (paramMap.get('street') != null && paramMap.get('streetField') != null && paramMap.get('streetField').length() > 0)
+      {
+        c.put(paramMap.get('streetField'), paramMap.get('street'));
+        //c.Street__c = paramMap.get('street');
+      }
+      if (paramMap.get('city') != null && paramMap.get('cityField') != null && paramMap.get('cityField').length() > 0)
+      {
+        c.put(paramMap.get('cityField'), paramMap.get('city'));
+        //c.City__c = paramMap.get('city');
+      }
+      if (paramMap.get('state') != null && paramMap.get('stateField') != null && paramMap.get('stateField').length() > 0)
+      {
+        c.put(paramMap.get('stateField'), paramMap.get('state'));
+        //c.State__c = paramMap.get('state');
+      }
+      if (paramMap.get('postal') != null && paramMap.get('postalField') != null && paramMap.get('postalField').length() > 0)
+      {
+        c.put(paramMap.get('postalField'), paramMap.get('postal'));
+        //c.Zip__c = paramMap.get('postal');
+      }  
 
       if (paramMap.get('anonymousFlag') == 'false' && paramMap.get('contactId') != null && paramMap.get('contactId').length() > 0)
       {

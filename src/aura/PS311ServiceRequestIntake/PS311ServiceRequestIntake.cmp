@@ -6,6 +6,10 @@
 
   <aura:attribute name="userId" type="String" />
   <aura:attribute name="contactId" type="String" />
+  <aura:attribute name="autoCenter" type="String" default="true" />
+  <aura:attribute name="mapCenterLat" type="String" default="30.267811" />
+  <aura:attribute name="mapCenterLng" type="String" default="-97.744328" />
+  <aura:attribute name="mapZoomLevel" type="Integer" default="11" />
 
   <aura:attribute name="errorMsg" type="String" />
   <aura:attribute name="saveResult" type="String" />
@@ -14,6 +18,15 @@
   <aura:attribute name="latitude" type="Decimal" />
   <aura:attribute name="longitude" type="Decimal" />
   <aura:attribute name="address" type="String" />
+  <aura:attribute name="addressField" type="String" default="Address__c" />
+  <aura:attribute name="street" type="String" />
+  <aura:attribute name="streetField" type="String"  default="Street__c"/>
+  <aura:attribute name="city" type="String" />
+  <aura:attribute name="cityField" type="String"  default="City__c"/>
+  <aura:attribute name="state" type="String" />
+  <aura:attribute name="stateField" type="String"  default="State__c"/>
+  <aura:attribute name="postal" type="String" />
+  <aura:attribute name="postalField" type="String"  default="Postal__c"/>
   <aura:attribute name="description" type="String" />
   <aura:attribute name="type" type="String" />
   <aura:attribute name="subtype" type="String" />
@@ -139,7 +152,7 @@
               Description
             </aura:set>
             <p class="slds-p-horizontal--small">
-              <lightning:textarea aura:id="description" name="Decribe the issue" label="Decribe the issue in detail." value="{!v.description}" maxlength="500" />
+              <lightning:textarea aura:id="description" name="Describe the issue" label="Describe the issue in detail." value="{!v.description}" maxlength="500" />
             </p>
           </lightning:card>
           <lightning:card iconName="standard:photo">
