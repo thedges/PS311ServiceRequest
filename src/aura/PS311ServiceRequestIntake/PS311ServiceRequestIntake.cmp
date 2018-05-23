@@ -120,7 +120,7 @@
           </lightning:card>
           <div class="slds-m-bottom--medium"></div>
         </div>
-        <div class="slds-col--padded-medium slds-size--5-of-7 slds-small-size--1-of-2 slds-medium-size--1-of-2">
+        <div class="slds-col--padded-medium slds-size--7-of-7 slds-small-size--1-of-2 slds-medium-size--1-of-2">
           <lightning:card iconName="action:edit">
             <aura:set attribute="title">
               Issue Type

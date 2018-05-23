@@ -20,6 +20,7 @@
 	},
         
     save : function(cmp) {
+        console.log('ImageUpload__fk::save...');
         var fileInput = cmp.find("file").getElement();
         var file = fileInput.files[0];
         if(!file){
@@ -39,6 +40,7 @@
     },
         
     upload : function(cmp, file, fileContents) {
+        console.log('ImageUpload__fk::upload...');
         var action = cmp.get("c.saveTheFile"); 
 
         action.setParams({
@@ -52,6 +54,7 @@
             var message = '';
             var status = 'SUCCESS';
             
+            console.log('callback=' + JSON.stringify(a));
             if (a.getState() === "SUCCESS") {
                 console.log('upload=' + a.getReturnValue());
                 message = a.getReturnValue();
@@ -96,6 +99,7 @@
         }
     },
 	getBase64Image: function(img) {
+        console.log('ImageUpload__fk::getBase64Image...');
         var dataURL = img.toDataURL("image/png");
         return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
     },
@@ -103,6 +107,7 @@
         $A.util.removeClass(cmp.find("camera_button"), "clicked");
     },
     base64ToArrayBuffer : function(base64) {
+        console.log('ImageUpload__fk::base64ToArrayBuffer...');
         base64 = base64.replace(/^data\:([^\;]+)\;base64,/gmi, '');
         var binary_string = window.atob(base64);
         var len = binary_string.length;
@@ -113,6 +118,7 @@
     	return bytes.buffer;
     },    
     megapix: function(cmp, file, canvas) {
+        console.log('ImageUpload__fk::megapix...');
         var reader = new FileReader();
         var self = this;
         var orientation;
