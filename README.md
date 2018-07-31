@@ -21,7 +21,7 @@ This package contains a component to collect 311 service request details. It mim
   - <b>State Field</b> - the field API name for storing the state
   - <b>Zipcode Field</b> - the field API name for storing the zipcode/postal code
   - <b>Record Type</b> - a drop-down list of Case record types; select one to filter Type field values and to set record type on new case creation
-  - <b>My Domain</b> - if a record type is selected above, provide the My Domain value as defined in the picture below.
+  - <b>My Domain</b> - if a record type is selected above, provide your My Domain value as shown in the example picture below.
 
 ![alt text](https://github.com/thedges/PS311ServiceRequest/blob/master/mydomain.png "My Domain")
 
