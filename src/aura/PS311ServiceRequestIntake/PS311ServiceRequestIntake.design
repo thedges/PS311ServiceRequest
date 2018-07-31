@@ -8,5 +8,6 @@
     <design:attribute name="cityField" label="Field API name for city" Description="Field API name to store the city name"  />
     <design:attribute name="stateField" label="Field API name for state" Description="Field API name to store the state name"  />
     <design:attribute name="postalField" label="Field API name for zip code" Description="Field API name to store the postal/zip code"  />
-
+    <design:attribute name="recordTypeId" label="Record type for new records" datasource="apex://PS311CaseRecordTypePicklist"/>
+    <design:attribute name="myDomain" label="My domain name"/>
 </design:component>

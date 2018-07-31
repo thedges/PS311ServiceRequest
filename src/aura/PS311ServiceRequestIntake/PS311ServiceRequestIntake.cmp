@@ -30,6 +30,8 @@
   <aura:attribute name="description" type="String" />
   <aura:attribute name="type" type="String" />
   <aura:attribute name="subtype" type="String" />
+  <aura:attribute name="recordTypeId" type="String" default=""/>
+  <aura:attribute name="myDomain" type="String" default=""/>
 
   <aura:attribute name="anonymousFlag" type="Boolean" default="true" />
   <aura:attribute name="firstName" type="String" />

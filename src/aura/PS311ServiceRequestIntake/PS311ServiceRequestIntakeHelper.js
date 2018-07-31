@@ -67,15 +67,20 @@
     $A.enqueueAction(action);
     //$A.clientService.runActions([action], this, function() {});
   },
-  getTypes: function(component) {
-    var action = component.get("c.getTypeOptions");
-
-    var self = this;
-    action.setCallback(this, function(actionResult) {
-      component.set("v.typeList", actionResult.getReturnValue());
-    });
-    $A.enqueueAction(action);
-  },
+    getTypes: function(component) {
+        var action = component.get("c.getTypeOptions");
+        action.setParams({
+            "myDomain": component.get("v.myDomain"),
+            "recordTypeId": component.get("v.recordTypeId")
+        });
+        
+        
+        var self = this;
+        action.setCallback(this, function(actionResult) {
+            component.set("v.typeList", actionResult.getReturnValue());
+        });
+        $A.enqueueAction(action);
+    },
   getSubTypes: function(component, type) {
     var action = component.get("c.getSubTypeOptions");
     action.setParams({
@@ -111,11 +116,13 @@
     map['type'] = component.get('v.type');
     map['subtype'] = component.get('v.subtype');
 
-    map['anonymousFlag'] = component.get('v.anonymousFlag');
+    map['anonymousFlag'] = component.get('v.anonymousFlag').toString();
     map['firstName'] = component.get('v.firstName');
     map['lastName'] = component.get('v.lastName');
     map['email'] = component.get('v.email');
     map['phone'] = component.get('v.phone');
+      
+    map['recordTypeId'] = component.get('v.recordTypeId');
 
     console.log('paramMap=' + JSON.stringify(map));
 
@@ -219,4 +226,6 @@
 
     component.set("v.runtimeEnv", envRT);
   }
+    
+
 })

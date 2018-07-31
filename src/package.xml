@@ -2,6 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>ImageUploadController_fk</members>
+        <members>PS311CaseRecordTypePicklist</members>
         <members>PS311ServiceRequestIntakeController</members>
         <members>TestImageUploadController_fk</members>
         <name>ApexClass</name>
