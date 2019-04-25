@@ -88,33 +88,21 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Damage</fullName>
+                    <fullName>Graffiti</fullName>
                     <default>false</default>
                     <label>Damage</label>
                 </value>
                 <value>
-                    <fullName>Faded Paint</fullName>
+                    <fullName>Loose Dog</fullName>
                     <default>false</default>
                     <label>Faded Paint</label>
                 </value>
                 <value>
-                    <fullName>Illegal Painting</fullName>
+                    <fullName>Trash In Yard</fullName>
                     <default>false</default>
                     <label>Illegal Painting</label>
                 </value>
             </valueSetDefinition>
-            <valueSettings>
-                <controllingFieldValue>Events</controllingFieldValue>
-                <valueName>Damage</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Events</controllingFieldValue>
-                <valueName>Faded Paint</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>General Inquiry</controllingFieldValue>
-                <valueName>Illegal Painting</valueName>
-            </valueSettings>
         </valueSet>
     </fields>
 </CustomObject>
