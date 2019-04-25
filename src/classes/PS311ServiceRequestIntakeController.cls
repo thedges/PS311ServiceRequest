@@ -206,7 +206,7 @@ public without sharing class PS311ServiceRequestIntakeController
             String recordTypeId = paramMap.get('recordTypeId');
             if (recordTypeId != null && recordTypeId.length() > 0)
             {
-                c.RecordTypeId = recordTypeId;
+                c.put('RecordTypeId',recordTypeId);
             }
             
             System.debug('case=' + JSON.serializePretty(c));

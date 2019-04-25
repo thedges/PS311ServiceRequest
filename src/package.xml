@@ -22,6 +22,7 @@
         <members>Case.Postal__c</members>
         <members>Case.State__c</members>
         <members>Case.Street__c</members>
+        <members>Case.Sub_Type__c</members>
         <name>CustomField</name>
     </types>
     <types>
