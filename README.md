@@ -1,5 +1,7 @@
 # PS311ServiceRequest
 
+THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/thedges/Disclaimer/master/disclaimer.txt).
+
 This package contains a component to collect 311 service request details. It mimics the [San Diego "Get It Done"](https://www.sandiego.gov/get-it-done) interface. Contains 4 primary screens to collect and submit service request information:
 * <b>Issue Details</b> - primary screen to capture issue details; address location, issue type/sub-type, description, and image
 * <b>Follow Up</b> - the contact details; either anonymous or capture individual contact details
