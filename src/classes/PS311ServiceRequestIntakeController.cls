@@ -19,7 +19,7 @@ public without sharing class PS311ServiceRequestIntakeController
         List<String> retList = new List<String>();
         retList.add('');
         
-        if (recordTypeId == null || recordTypeId.length() == 0)
+        if (recordTypeId == null || recordTypeId.length() == 0 || UserInfo.getSessionID() == null)
         {
             Schema.DescribeFieldResult fieldResult = Case.Type.getDescribe();
             List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
