@@ -8,8 +8,6 @@ This package contains a component to collect 311 service request details. It mim
 * <b>Verify</b> - a verification screen of information about to be submited
 * <b>Confirmation</b> - screen confirming submission of service case with link to new case record
 
-<b>Dependency:</b> Install the [PSCommon](https://github.com/thedges/PSCommon) package first
-
 ![alt text](https://github.com/thedges/PS311ServiceRequest/blob/master/311-community.png "Sample Image")
 
 * The component configuration fields are:
@@ -26,6 +24,12 @@ This package contains a component to collect 311 service request details. It mim
   - <b>My Domain</b> - if a record type is selected above, provide your My Domain value as shown in the example picture below.
 
 ![alt text](https://github.com/thedges/PS311ServiceRequest/blob/master/mydomain.png "My Domain")
+
+---
+# Installation
+1. Install the [LightningStrike.io](https://github.com/thedges/Lightning-Strike) package.
+2. Install the [PSCommon](https://github.com/thedges/PSCommon) package.
+3. Install this repo via the button below
 
 <a href="https://githubsfdeploy.herokuapp.com">
   <img alt="Deploy to Salesforce"
