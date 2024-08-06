@@ -30,6 +30,9 @@ This package contains a component to collect 311 service request details. It mim
 1. Install the [LightningStrike.io](https://github.com/thedges/Lightning-Strike) package.
 2. Install the [PSCommon](https://github.com/thedges/PSCommon) package.
 3. Install this repo via the button below
+4. Make sure any user or community Guest user profile has access to the following Apex classes:
+   * PS311CaseRecordTypePicklist
+   * PS311ServiceRequestIntakeController
 
 <a href="https://githubsfdeploy.herokuapp.com">
   <img alt="Deploy to Salesforce"
